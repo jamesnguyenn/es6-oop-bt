@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+        <div class="baiTap1">
+            <h3>Bài tập 1: Quản lý món ăn (80% điểm)</h3>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card ">
+                    <div class="card-header bg-dark text-white">Quản lý món ăn</div>
+                      <div class="card-body">
+                        <h4 class="card-title">Tạo menu</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p>Nhập mã món ăn</p>
+                                    <input class="form-control" id="maMonAn" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p>Nhập tên món ăn</p>
+                                    <input class="form-control" id="tenMonAn" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p>Nhập giá tiền</p>
+                                    <input class="form-control" id="giaTien" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p>Link ảnh</p>
+                                    <input class="form-control" id="linkAnh" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group text-right">
+                                    <button id="addBtn" class="btn btn-success">Thêm món ăn</button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                     
+                        
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <table class="table">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th>Mã món ăn</th>
+                                <th>Tên món ăn</th>
+                                <th>Giá</th>
+                                <th>Hình ảnh</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tblDanhMucMonAn">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="baiTap2">
+            <h3>Bài tập 2: Ứng dụng chọn món ăn (20% điểm)</h3>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Menu cybersoft
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 font-weight-bold">Mã món</div>
+                                <div class="col-3 font-weight-bold">Tên món</div>
+                                <div class="col-3 font-weight-bold">Giá tiền</div>
+                                <div class="col-3 font-weight-bold">
+                                    Thao tác
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3">1</div>
+                                <div class="col-3">Nước lẩu haidilao</div>
+                                <div class="col-3">100</div>
+                                <div class="col-3">
+                                    <button id="add" class="bg-danger text-white btn" data-set="1">+</button>
+                                    <button id="delete" class="bg-danger text-white btn" data-set="1">-</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3">2</div>
+                                <div class="col-3">Mì cay thành đô</div>
+                                <div class="col-3">200</div>
+                                <div class="col-3">
+                                    <button id="add" class="bg-danger text-white btn" data-set="2">+</button>
+                                    <button id="delete" class="bg-danger text-white btn" data-set="2">-</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3">3</div>
+                                <div class="col-3">Mực bạch ngọc</div>
+                                <div class="col-3">300</div>
+                                <div class="col-3">
+                                    <button id="add" class="bg-danger text-white btn" data-set="3">+</button>
+                                    <button id="delete" class="bg-danger text-white btn" data-set="3">-</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-6">
+                    <div id="bill">
+                        <div class="card">
+                          <div class="card-header bg-danger text-white">
+                              Hoá đơn
+                          </div>
+                          <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã món</th>
+                                        <th>Tên món</th>
+                                        <th>Số lượng</th>
+                                        <th>Thành tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblHoaDon">
+                                    
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td id="txtThanhTien" class="font-weight-bold">Thành tiền</td>
+                                            <td>1300</td>
+                                        </tr>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="module" src="./constants.js"></script>
+    <script type="module" src="./method.js"></script>
+    <script type="module" src="./models/Food.js"></script>
+    <script  type="module" src="./controllers/index.js"></script>
+</body>
+</html>
